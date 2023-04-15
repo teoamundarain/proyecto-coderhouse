@@ -1,0 +1,63 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+#header-index {
+    background-color: gray;
+}
+
+
+#header-index nav {
+    width: 100%;
+}
+
+#header-index ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin: 0;
+    list-style: none;
+}
+
+#header-index ul li {
+    padding: 10px;
+    margin: 0 15px;
+    color: #ffffff;
+    background-color: transparent;
+}
+
+#header-index ul li:hover {
+    background-color: #444;
+}
+
+.faqs {
+
+    text-align: center;
+    padding: 40px 80px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.social-media-links ul li a:hover {
+    color: #e91e63;
+}
+
+.paginas ul li a:hover {
+    color: #e91e63;
+}
+
+footer {
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+    margin-top: 20px;
+    background-color: gray;
+}

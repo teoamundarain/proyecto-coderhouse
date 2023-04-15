@@ -1,0 +1,165 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+#header-index {
+    position: relative;
+    /* para hacer que el contenedor sea un punto de referencia para el nav */
+}
+
+#header-index img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#header-index nav {
+    position: absolute;
+    /* para superponer el nav sobre la imagen */
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+#header-index ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin: 0;
+    list-style: none;
+}
+
+#header-index ul li {
+    padding: 10px;
+    margin: 0 15px;
+    color: #ffffff;
+    background-color: transparent;
+}
+
+#header-index ul li:hover {
+    background-color: #444;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.tratamientos h2 {
+    text-align: center;
+}
+
+.tratamientos ul {
+    display: flex;
+    overflow-x: auto;
+}
+
+.tratamientos li {
+    flex-basis: 33.33%;
+    /* Ancho de cada tratamiento */
+    list-style: none;
+    text-align: center;
+}
+
+.tratamientos li img {
+    max-width: 100%;
+    height: 280px;
+}
+
+.acerca-de-mi {
+
+    display: flex;
+}
+
+.retrato {
+
+    width: 60%;
+    margin-left: 180px;
+    margin-top: 60px;
+}
+
+.redaccion-sobre-mi {
+
+    width: 40%;
+    justify-content: center;
+    align-items: center;
+    margin-right: 90px;
+    margin-top: 90px;
+    line-height: 2;
+}
+
+.redaccion-sobre-mi h2 {
+    text-align: center;
+}
+
+.comentarios-recientes {
+
+    background-color: rgb(227, 240, 174);
+}
+
+.comentarios-recientes h2 {
+
+    text-align: center;
+}
+
+.comentarios {
+    display: flex;
+    overflow-x: scroll;
+}
+
+.comentarios ul {
+    display: flex;
+    width: 1200px;
+    /* Cambiar el valor al ancho total de los elementos hijos */
+}
+
+.comentarios li {
+    line-height: 2;
+    flex: 0 0 500px;
+    /* Ancho fijo de los elementos hijos */
+    margin-right: 40px;
+}
+
+
+
+.formularioycontacto {
+
+    display: flex;
+}
+
+.informaciondecontacto {
+
+    width: 50%;
+}
+
+.formulario {
+
+    width: 50%;
+}
+
+.mapa {
+
+    text-align: center;
+}
+
+.social-media-links ul li a:hover {
+
+    color: #e91e63;
+}
+
+.paginas ul li a:hover {
+    color: #e91e63;
+}
+
+footer {
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+    margin-top: 20px;
+    background-color: gray;
+}
