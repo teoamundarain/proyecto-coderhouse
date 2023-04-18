@@ -5,6 +5,7 @@ body {
 #header-index {
     position: relative;
     /* para hacer que el contenedor sea un punto de referencia para el nav */
+    background-color: gray;
 }
 
 #header-index img {
@@ -21,7 +22,7 @@ body {
     width: 100%;
 }
 
-#header-index ul {
+.menu {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,19 +31,23 @@ body {
     list-style: none;
 }
 
-#header-index ul li {
+.menu li {
     padding: 10px;
     margin: 0 15px;
     color: #ffffff;
     background-color: transparent;
+    cursor: pointer;
 }
 
-#header-index ul li:hover {
+.menu li:hover {
     background-color: #444;
+    color: white;
+    font-weight: 700;
 }
 
 ul {
     list-style: none;
+    padding: 0;
 }
 
 a {
@@ -56,35 +61,38 @@ a {
 
 .tratamientos ul {
     display: flex;
-    overflow-x: auto;
+    gap: 20px;
+    justify-content: space-around;
 }
 
 .tratamientos li {
-    flex-basis: 33.33%;
-    /* Ancho de cada tratamiento */
     list-style: none;
     text-align: center;
+    flex: 1;
 }
 
 .tratamientos li img {
-    max-width: 100%;
-    height: 280px;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
 }
 
-
-#header-index {
-    background-color: gray;
-}
 #header-views {
     background-color: gray;
+    position: relative;
+    height: 49px;
 }
 
 
 #header-views nav {
+    background-color: gray;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
 }
 
-#header-views ul {
+.menu-views {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -93,37 +101,37 @@ a {
     list-style: none;
 }
 
-#header-views ul li {
+.menu-views li {
     padding: 10px;
     margin: 0 15px;
     color: #ffffff;
     background-color: transparent;
 }
 
-#header-views ul li:hover {
+.menu-views li:hover {
     background-color: #444;
 }
 
 .acerca-de-mi {
-
+    padding: 90px;
     display: flex;
+    gap: 30px;
 }
 
 .retrato {
-
     width: 60%;
-    margin-left: 180px;
-    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .redaccion-sobre-mi {
-
     width: 40%;
     justify-content: center;
     align-items: center;
-    margin-right: 90px;
-    margin-top: 90px;
     line-height: 2;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -131,15 +139,6 @@ a {
 
     text-align: center;
     padding: 40px 80px;
-}
-
-ul {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    color: white;
 }
 
 .social-media-links ul li a:hover {
@@ -185,7 +184,7 @@ a {
 
 
 .formularioycontacto {
-
+    padding: 20px;
     display: flex;
 }
 
@@ -215,42 +214,6 @@ footer {
     padding: 40px 80px;
 }
 
-ul {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
-
-
-.contact {
-
-    text-align: center;
-    padding: 40px 80px;
-}
-
-ul {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
-
-
-footer {
-    text-align: center;
-    font-size: 12px;
-    color: #999;
-    margin-top: 20px;
-    background-color: gray;
-}
-
 
 .faqs {
 
@@ -258,36 +221,135 @@ footer {
     padding: 40px 80px;
 }
 
-ul {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
-
-
 .testimonios {
 
     text-align: center;
     padding: 40px 80px;
 }
 
-ul {
-    list-style: none;
+.mapa {
+    text-align: center;
+    overflow-x: auto;
 }
 
-a {
-    text-decoration: none;
+input[type=checkbox] {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    text-align: end;
+    padding: 10px;
+    color: gray;
+    cursor: pointer;
+}
+
+.hamburger-views {
+    display: none;
+    font-size: 24px;
+    text-align: end;
+    padding: 10px;
     color: white;
+    cursor: pointer;
 }
 
-.social-media-links ul li a:hover {
-    color: #e91e63;
+@media screen and (max-width: 1024px) {
+    .tratamientos ul {
+        flex-direction: column;
+        padding: 0px 20px;
+    }
+
+    .tratamientos li img {
+        height: 400px;
+    }
+
+    .acerca-de-mi {
+        padding: 20px;
+    }
+
+    .retrato {
+        width: 40%;
+    }
+
+    .retrato img {
+        width: 100%;
+    }
+
+    .redaccion-sobre-mi {
+        width: 60%;
+    }
 }
 
-.paginas ul li a:hover {
-    color: #e91e63;
+@media screen and (max-width: 768px) {
+    .acerca-de-mi {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .redaccion-sobre-mi {
+        width: 100%;
+    }
+
+    #header-index nav {
+        background-color: #fff;
+    }
+
+    #header-views nav {
+        background-color: #fff;
+    }
+
+    .menu {
+        flex-direction: column;
+        display: none;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .menu li a {
+        color: gray;
+        font-weight: 700;
+    }
+
+    .menu li:hover a {
+        color: white;
+        font-weight: 700;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger-views {
+        display: block;
+    }
+
+    input[type=checkbox]:checked ~ .menu {
+        display: block;
+    }
+
+    .formularioycontacto {
+        flex-direction: column;
+    }
+
+    .informaciondecontacto {
+        width: 100%;
+        text-align: center;
+    }
+
+    .formulario {
+        width: 100%;
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    .aboutme {
+        padding: 30px 20px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .retrato {
+        width: 80%;
+    }
 }
